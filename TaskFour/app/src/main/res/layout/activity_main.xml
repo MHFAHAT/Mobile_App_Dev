@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/StudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: MD.Monjurul Haque Fahat" />
+
+        <TextView android:id="@+id/StudentID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 22-47348-2"/>
+
+        <TextView android:id="@+id/SemesterDept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester: 12th | Dept: CSE"
+            android:layout_marginBottom="15dp"/>
+
+        <TableLayout
+            android:id="@+id/GradeTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow android:background="#CCCBCB" android:padding="8dp">
+                <TextView android:text="Subject"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView android:text="Obtained"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView android:text="Total"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView android:text="Grade"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <TableLayout android:id="@+id/TableBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"/>
+
+            <TableRow android:background="#EEEEEE"
+                android:padding="8dp">
+
+                <TextView android:id="@+id/SummaryDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:text="Total: 0 | Passed: 0 | Failed: 0"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/GpaDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPA: 0.0"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="#1E88E5"/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="20dp"/>
+
+        <EditText android:id="@+id/InputSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject Name"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText android:id="@+id/InputObtained"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Obtained"
+                android:inputType="number"/>
+
+            <EditText android:id="@+id/InputTotal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Total"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <Button android:id="@+id/AddBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Subject"
+            android:layout_marginTop="10dp"/>
+
+        <Button android:id="@+id/ShareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print/Share Report"
+            android:backgroundTint="#607D8B"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+</ScrollView>
