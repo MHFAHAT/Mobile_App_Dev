@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/StickyToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="The Daily Reader"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/BookmarkBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageButton
+                android:id="@+id/ShareBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_share" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ArticleScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/StickyToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/HeaderImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tag_bg"
+                android:text="TECHNOLOGY"
+                android:textColor="#1A73E8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="How Technology is Shaping the Future of Society"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="By Alex Rivera • April 15, 2026"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="#DDDDDD" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button android:id="@+id/NavIntro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Introduction" style="?attr/borderlessButtonStyle"/>
+                    <Button android:id="@+id/NavPoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Key Points" style="?attr/borderlessButtonStyle"/>
+                    <Button android:id="@+id/NavAnalysis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Analysis" style="?attr/borderlessButtonStyle"/>
+                    <Button android:id="@+id/NavConclusion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Conclusion" style="?attr/borderlessButtonStyle"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView android:id="@+id/SecIntro" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Introduction" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="16sp" android:lineSpacingExtra="4dp"
+                android:text="@string/article1" />
+
+            <TextView android:id="@+id/SecPoints" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Key Points" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="16sp" android:lineSpacingExtra="4dp"
+                android:text="@string/article2"/>
+            <TextView android:id="@+id/SecAnalysis" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Analysis" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="16sp" android:lineSpacingExtra="4dp"
+                android:text="@string/article3"/>
+            <TextView android:id="@+id/SecConclusion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Conclusion" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="16sp" android:lineSpacingExtra="4dp"
+                android:text="@string/article4"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tags:" android:textStyle="bold" android:layout_marginTop="30dp"/>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#AI" style="?attr/borderlessButtonStyle" android:background="@drawable/tag_bg" android:layout_marginEnd="8dp"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#Tech" style="?attr/borderlessButtonStyle" android:background="@drawable/tag_bg" android:layout_marginEnd="8dp"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#Future" style="?attr/borderlessButtonStyle" android:background="@drawable/tag_bg" android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Related Articles" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="30dp" android:layout_marginBottom="10dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="80dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@android:drawable/ic_menu_gallery" android:background="#EEEEEE"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="Quantum Computing Basics\nRead more..." android:textColor="#1A73E8"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BackToTopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:backgroundTint="#FFFFFF"
+        app:fabSize="mini" />
+
+</RelativeLayout>
