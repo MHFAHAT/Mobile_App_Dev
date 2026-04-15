@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/SelectionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        android:visibility="gone"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/SelectedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="0 selected"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/DeleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/TabScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SelectionToolbar"
+        android:padding="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/TabAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All" style="?attr/borderlessButtonStyle"/>
+            <Button android:id="@+id/TabNature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nature" style="?attr/borderlessButtonStyle"/>
+            <Button android:id="@+id/TabCity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="City" style="?attr/borderlessButtonStyle"/>
+            <Button android:id="@+id/TabFood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food" style="?attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <GridView
+        android:id="@+id/PhotoGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/TabScroll"
+        android:numColumns="2"
+        android:padding="4dp"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/AddPhotoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_menu_add" />
+
+</RelativeLayout>
