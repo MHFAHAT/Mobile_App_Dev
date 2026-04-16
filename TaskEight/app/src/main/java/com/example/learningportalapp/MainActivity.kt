@@ -59,10 +59,7 @@ class MainActivity : AppCompatActivity() {
                 progressBar.visibility = View.GONE
             }
 
-            override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
-                // Load local offline page on error
-                webView.loadUrl("file:///android_asset/offline.html")
-            }
+
         }
 
         webView.webChromeClient = object : WebChromeClient() {
