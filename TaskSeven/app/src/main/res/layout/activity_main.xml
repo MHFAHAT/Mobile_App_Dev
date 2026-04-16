@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#2196F3"
-        android:visibility="gone"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="16dp"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/SelectedCount"
